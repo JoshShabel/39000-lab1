@@ -14,7 +14,6 @@ const Introduction = ({ introductionTitle, introductionDescription}) => {
 Introduction.propTypes = {
     introductionTitle: PropTypes.string,
     introductionDescription: PropTypes.string,
-
 }
 
 export default Introduction;

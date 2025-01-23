@@ -6,7 +6,7 @@ import CardOne from "./CardOne.jsx";
 import Header from './Header.jsx';
 import Introduction from "./Introduction.jsx";
 import CardTwo from "./CardTwo.jsx";
-
+import Wrapper from "./Wrapper.jsx";
 
 function App() {
     const [textInput, setTextInput] = useState("");
@@ -27,6 +27,11 @@ function App() {
                     "Suspendisse sed turpis nulla. Mauris egestas efficitur enim. Phasellus porta interdum sem, " +
                     "id vestibulum enim luctus dignissim. Sed venenatis nisl sed justo vulputate ultricies. " +
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "}/>
+
+                <Wrapper>
+                    <h4>Options</h4>
+                    <p>Below, you can give this individual a name, and choose the background color behind them.</p>
+                </Wrapper>
 
                 <label>Toggle background color:</label>
                 <button onClick={() => setPersonChose(prevPersonChose => !prevPersonChose)}>
