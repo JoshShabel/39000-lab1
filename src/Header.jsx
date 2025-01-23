@@ -5,7 +5,7 @@ const Header = ({headingTitle}) => {
     return (
 
         <div>
-            <h2>{headingTitle}</h2>
+            <h1>{headingTitle}</h1>
         </div>
     );
 };
