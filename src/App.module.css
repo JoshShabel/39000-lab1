@@ -1,0 +1,35 @@
+
+.appBody {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+}
+.appBodyDark {
+  composes: appBody;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+.appBodyLight {
+  composes: appBody;
+  color: rgba(0, 0, 0, 0.87);
+  color-scheme: dark;
+  background-color: #dbdbdb;
+}
+
+.cardDisplayArea{
+  padding: 10px 20px;
+  margin-top: 20px;
+  height: 440px;
+  display:flex; flex-direction:row;
+}
+
+.darkCardDisplayArea{
+  composes: cardDisplayArea;
+  background-color: black;
+}
+
+.lightCardDisplayArea{
+  composes: cardDisplayArea;
+  background-color: white;
+}

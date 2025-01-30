@@ -1,11 +1,11 @@
-import './Header.css';
+import styles from './Header.module.css';
 import PropTypes from "prop-types";
 
 const Header = ({headingTitle}) => {
     return (
 
         <div>
-            <h1>{headingTitle}</h1>
+            <h1 className={styles.header}>{headingTitle}</h1>
         </div>
     );
 };

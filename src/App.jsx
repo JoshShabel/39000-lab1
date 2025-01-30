@@ -1,25 +1,33 @@
 import React, {useState} from 'react'
 /*import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'*/
-import './App.css'
+import styles from './App.module.css'
 import CardOne from "./CardOne.jsx";
 import Header from './Header.jsx';
 import Introduction from "./Introduction.jsx";
 import CardTwo from "./CardTwo.jsx";
 import Wrapper from "./Wrapper.jsx";
 import CardThree from "./CardThree.jsx";
+import Navbar from './Navbar.jsx';
+
 
 
 function App() {
     const [textInput, setTextInput] = useState("");
     const [job, setJob] = React.useState('None Chosen');
+    const [modeToggle, setModeToggle] = useState(true);
     const handleChange = (event) => {
         setJob(event.target.value);
     };
+    const appModeToggleFunction = () => {
+        setModeToggle(prevModeToggle => !prevModeToggle);
+        console.log(modeToggle);
+    }
 
     return (
         <>
-            <div>
+            <Navbar modeToggle={modeToggle} setModeToggleFunction={appModeToggleFunction} />
+            <div className={modeToggle ? styles.appBodyDark : styles.appBodyLight}>
                 <Header headingTitle={"Profile App"}/>
                 <Introduction introductionTitle={"About"} introductionDescription={"\n" +
                     "\n" +
@@ -54,29 +62,12 @@ function App() {
                 <button onClick={
                         () => {setTextInput("");setJob("None Chosen");}
                 }>Reset</button>
-                <div className={"cardClassOne"}>
+                <div className={modeToggle ? styles.darkCardDisplayArea : styles.lightCardDisplayArea}>
                     <CardOne textFilter={textInput} job={job}/>
                     <CardTwo textFilter={textInput} job={job}/>
                     <CardThree textFilter={textInput} job={job}/>
                 </div>
-
-                {/*                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo"/>
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo"/>
-                </a>*/}
             </div>
-            {/*            <h1>Vite + React</h1>
-            <div className="card">
-
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>*/}
             </>
             )
             }
