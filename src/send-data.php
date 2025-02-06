@@ -1,7 +1,4 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
 include 'db.php';
 // Access text fields from the form submission
 $name = isset($_POST['name']) ? $_POST['name'] : '';
