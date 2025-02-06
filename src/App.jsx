@@ -9,6 +9,7 @@ import CardTwo from "./CardTwo.jsx";
 import Wrapper from "./Wrapper.jsx";
 import CardThree from "./CardThree.jsx";
 import Navbar from './Navbar.jsx';
+import ProfileForm from "./ProfileForm.jsx";
 
 
 
@@ -40,6 +41,8 @@ function App() {
                     "Suspendisse sed turpis nulla. Mauris egestas efficitur enim. Phasellus porta interdum sem, " +
                     "id vestibulum enim luctus dignissim. Sed venenatis nisl sed justo vulputate ultricies. " +
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "}/>
+
+                <ProfileForm></ProfileForm>
 
                 <Wrapper>
                     <h4>Options</h4>
